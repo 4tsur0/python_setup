@@ -21,13 +21,18 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 pyenv install -l
 pyenv install バージョン名 (3.11.2)
 
-## pyenv
+# pyenv
 mkdir プロジェクトのパス
 cd プロジェクトのパス
 pyenv local バージョン名 (3.11.2)
 
-## venv
+# venv
 cd プロジェクトのパス
 python -m venv [新しい環境名]
 source [環境名]/bin/activate ## アクティベート
 deactivate ## 終了
+
+# python init
+pip3 install --upgrade pip
+pip3 install --upgrade setuptools
+pip3 install numpy scipy matplotlib Pillow ipython scikit_learn jupyter pandas
