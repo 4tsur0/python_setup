@@ -1,9 +1,11 @@
 # Install anyenv
-
+pip install gcc
 git clone https://github.com/anyenv/anyenv ~/.anyenv
 echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
-anyenv init
 echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+
+exec $SHELL -l
+
 anyenv install --init
 
 ## install anyenv-update
@@ -16,6 +18,8 @@ anyenv install pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+
+exec $SHELL -l
 
 ## setup pyenv
 pyenv install -l
