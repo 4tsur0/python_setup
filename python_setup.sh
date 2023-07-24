@@ -1,5 +1,4 @@
 # Install anyenv
-pip install gcc
 git clone https://github.com/anyenv/anyenv ~/.anyenv
 echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
